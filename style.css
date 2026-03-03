@@ -1,0 +1,214 @@
+/* 1. Genel Sayfa Ayarları - Arka planı mor seçmişsin, uyumu artıralım */
+body {
+    background-color: #5c4eb6; 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0 0 80px 0; /* Footer için en altta 80px yer ayırdık */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. Başlık ve Intro Alanı */
+header {
+    text-align: center;
+    max-width: 900px;
+    margin: 40px 0; /* Üstten ve alttan boşluk */
+}
+
+h1 {
+    color: #ffffff; /* Mor arka planda beyaz başlık daha iyi durur */
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.intro-text {
+    background-color: rgba(255, 255, 255, 0.15); /* Şeffaf beyaz modern durur */
+    backdrop-filter: blur(10px); /* Arka planı hafif bulanıklaştırır */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    line-height: 1.8;
+    color: #ffffff;
+    font-style: italic;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 3. Kart Konteynerı */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 4. Yatay Kart Tasarımı */
+.card {
+    display: flex;
+    background: #ffffff;
+    width: 90%; /* Mobilde de düzgün durması için */
+    max-width: 850px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Fotoğraf Alanı */
+.image-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cat-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Yazı Alanı */
+.info-section {
+    flex: 1.2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    margin: 0 0 15px 0;
+    color: #2d3436;
+    font-size: 2.2rem;
+    border-bottom: 3px solid #5080f2;
+    display: inline-block;
+}
+
+h3 {
+    margin: 10px 0;
+    color: #d35400;
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style-type: '🐾 ';
+    padding-left: 25px;
+    margin: 0 0 20px 0;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #2d3436;
+    font-weight: 500;
+}
+
+.origin-story {
+    font-size: 0.9rem;
+    color: #636e72;
+    background: #f1f2f6;
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 5px solid #5080f2;
+}
+
+/* 5. Footer - Görünmeme sorununu burada çözdük */
+footer {
+    background-color: rgba(0, 0, 0, 0.2); /* Arka plana hafif koyuluk */
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Sayfanın en altına iter */
+}
+
+footer p {
+    color: #ffffff; /* Beyaz yazı */
+    font-weight: 600;
+    margin: 0;
+}
+
+footer a {
+    color: #31eaff; /* Senin sevdiğin turkuaz rengi linkte kullandık */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Murphy ve Zuko Özel Şeritleri */
+.murphy-card { border-left: 10px solid #5d4037; }
+.zuko-card { border-left: 10px solid #e67e22; }
+/* Mobil Ayarı (Responsive) - Kartı ve İçeriği Küçülttük */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Kenar paylarını azalttık */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Başlığı mobilde küçülttük */
+        margin-top: 20px;
+    }
+
+    .intro-box {
+        padding: 15px;
+        font-size: 0.85rem; /* Intro metnini küçülttük */
+        border-radius: 20px;
+    }
+
+    .card-container {
+        gap: 20px; /* Kartlar arası boşluğu daralttık */
+    }
+
+    .card {
+        flex-direction: column; /* Üstte foto, altta yazı */
+        width: 85%; /* Ekranın %85'ini kaplar, kenarlardan ferah durur */
+        max-width: 280px; /* Kartın genişliğini iyice sınırladık (Taşmaz!) */
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+
+    .image-wrapper {
+        min-width: 100%;
+        height: 180px; /* Fotoğraf yüksekliğini kıstık */
+    }
+
+    .content-wrapper {
+        padding: 15px; /* İç boşluğu (padding) azalttık */
+    }
+
+    h2 {
+        font-size: 1.4rem; /* Kedi ismini küçülttük */
+        text-align: center;
+    }
+
+    .fav-section h3 {
+        font-size: 0.75rem; /* "Favorites" başlığını küçülttük */
+        margin-bottom: 8px;
+    }
+
+    li {
+        font-size: 0.75rem; /* Liste elemanlarını küçülttük */
+        margin-bottom: 5px;
+    }
+
+    .story {
+        font-size: 0.75rem; /* Hikaye kısmını küçülttük */
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 0.8rem;
+    }
+}
