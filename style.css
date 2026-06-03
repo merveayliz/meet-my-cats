@@ -142,8 +142,13 @@ footer a:hover {
 }
 
 
-.murphy-card { border-left: 10px solid #5d4037; }
-.zuko-card { border-left: 10px solid #e67e22; }
+.murphy-card {
+    border-left: 10px solid #5d4037; 
+}
+
+.zuko-card {
+    border-left: 10px solid #e67e22; 
+}
 
 @media (max-width: 768px) {
     body {
@@ -207,5 +212,4 @@ footer a:hover {
         padding: 20px;
         font-size: 0.8rem;
     }
-
 }
